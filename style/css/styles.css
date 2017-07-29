@@ -1,0 +1,68 @@
+@CHARSET "ISO-8859-1";
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	background-color: aliceblue;
+}
+
+text{
+	cursor: default
+}
+
+.drawingArea{
+	width: 100%;
+	height: 2000px;
+}
+
+path:hover{
+	stroke: orange;
+	cursor: pointer;
+}
+
+.legend{
+	width: 100px;
+	height: 700px;
+}
+
+.legendBar{
+	width: 30px;
+	height: 700px;
+}
+
+.pathTooltip{
+	position: absolute;			
+    text-align: center;
+    vertical-align: middle;			
+    width: auto;					
+    height: 30px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background:	#FAEBD7;	
+    border: 0px;		
+    border-radius: 5px;			
+    pointer-events: none;		
+}
+
+.functionA, .functionB, .functionC, .functionD, .functionE, .functionF, .functionG, .functionH, .functionI, .functionJ{
+	cursor: pointer;
+}
+
+.machineTooltip{
+	position: absolute;			
+    text-align: center;
+    vertical-align: middle;			
+    width: auto;					
+    height: 30px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background:	Thistle;	
+    border: 0px;		
+    border-radius: 5px;			
+    pointer-events: none;
+}
