@@ -9,19 +9,22 @@ var numberOfUsers = 20;
 var colorPool = ["Brown", "Coral", "Crimson", "DarkGoldenRod", "DarkOrange", "DarkRed", "DarkSalmon", "Firebrick", "IndianRed", "LightCoral", "LightSalmon", "Maroon", "OrangeRed", 
 				 "PaleVioletRed", "Tomato", "DeepPink", "HotPink", "MediumVioletRed", "Salmon", "Sienna"];
 
-function pathClicked(path){
+function colorPath(path){
 	var color;
 	
-	if(path.attr("class") == "clicked"){
-		path.attr("class", "");
+	if(path.attr("class") != "colored"){
+		path.attr("class", "colored");
+		color = colorPool.pop();
+		path.attr("stroke", color);
+	}
+}
+
+function removeColor(path){
+	var color;
+	if(path.attr("class") == "colored"){
 		color = path.attr("stroke");
 		colorPool.push(color);
 		path.attr("stroke", "#446ca2");
-	}
-	else{
-		path.attr("class", "clicked");
-		color = colorPool.pop();
-		path.attr("stroke", color);
 	}
 }
 
@@ -68,7 +71,7 @@ function pointAtX(a, b, x){
 	return [x, y];
 }
 
-function initialPointFunction(currentMachine, job){ //TODO: modificare i punti di partenza per ciascun job
+function initialPointFunction(currentMachine, job){
 	var initialPoint;
 	switch(currentMachine){
 		case "vm0" :
@@ -416,7 +419,6 @@ for(i=0 ; i<numberOfUsers ; i++){
 		var randomJobPicker = parseInt(Math.random()*10); //randomly picking up a job and
 		serviceChain.push(jobs[randomJobPicker]); 			  //pushing into an array representing the service chain
 	}
-	console.log("user" + i);
 	
 	var serviceChainCopy = []; //storing information about the service chain for later use
 	for(z=0 ; z<serviceChain.length ; z++){
@@ -567,14 +569,13 @@ for(i=0 ; i<numberOfUsers ; i++){
 					.attr("opacity", 0)
 					.html("User" + i + "<br/>" + "Service Chain: {" + serviceChainCopy.toString() + "}");	
 	
-	console.log(serviceChainCopy);
 	var lineFunction = d3.line()
 		.x(function(d){return d.x})
 		.y(function(d){return d.y});
-	
-	console.log(d3.select("#pathTooltip" + i));
+
 	var line = svg.append("path")
 		.attr("d", lineFunction(lineData))
+		.attr("id", "chain" + i)
 		.attr("stroke", "#446ca2")
 		.attr("stroke-width", 3)
 		.attr("chainNumber", i)
@@ -594,13 +595,13 @@ for(i=0 ; i<numberOfUsers ; i++){
 			//code to select multiple paths
 			pathClicked(_this);*/
 		})
-		 .on("mouseover", function(d) {		
-			 var _this = d3.select(this);
-			 var chainNumber = _this.attr("chainNumber");
-		 	 d3.select("#pathTooltip" + chainNumber).transition()		
+		.on("mouseover", function(d) {		
+			var _this = d3.select(this);
+			var chainNumber = _this.attr("chainNumber");
+		 	d3.select("#pathTooltip" + chainNumber).transition()		
 		 		.duration(200)		
 		 		.style("opacity", .9);		
-		 	 d3.select("#pathTooltip" + chainNumber)
+		 	d3.select("#pathTooltip" + chainNumber)
 		 		.style("left", (d3.event.pageX + 10) + "px")		
 		 		.style("top", (d3.event.pageY - 40) + "px");	
             })					
@@ -610,5 +611,10 @@ for(i=0 ; i<numberOfUsers ; i++){
         	d3.select("#pathTooltip" + chainNumber).transition()		
                 .duration(500)		
                 .style("opacity", 0);	
+        })
+        .on("contextmenu", function(){
+        	var _this = d3.select(this);
+        	var menu = createMenu(_this);        	
+        	event.preventDefault();
         });		
 }

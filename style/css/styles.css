@@ -12,7 +12,7 @@ body{
 }
 
 text{
-	cursor: default
+	pointer-events:none;
 }
 
 .drawingArea{
@@ -65,4 +65,40 @@ path:hover{
     border: 0px;		
     border-radius: 5px;			
     pointer-events: none;
+}
+
+.contextMenu{
+	position: absolute;
+	width: auto;
+	height: auto;
+	font: 11px sans-serif;
+	background: white;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	box-shadow: 2px 2px dimgray;
+	padding: 0px;	
+}
+.menuVoice{
+	display: block;
+	z-index: 999;
+	cursor: pointer;
+	padding: 5px;
+	padding-left: 10px;
+}
+.menuVoicesContainer{
+	padding:5px;
+}
+.menuVoice:hover{
+	background-color: lightgray;
+}
+
+.menuVoice:nth-Child(2) , .menuVoice:nth-Child(4){
+	border-bottom: 1px dotted #e6e6e6;
+}
+
+.disabled{
+	color: darkgray;
+}
+.disabled:hover{
+	background-color: white;
 }

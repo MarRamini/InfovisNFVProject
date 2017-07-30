@@ -35,7 +35,6 @@ popupContainer.append("rect")
 						.attr("transform", "translate(75,0)")
 						.on("click", function(){
 							var _this = d3.select(this);
-							console.log(_this.attr("open"));
 							if(_this.attr("open") == "true"){
 								popupContainer.attr("transform", "translate(-76,0)");	
 								_this.attr("open", false);

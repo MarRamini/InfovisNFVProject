@@ -113,11 +113,10 @@ svg.append("circle")
 	 		.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("A").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(0,2)) +", 65)");
 
@@ -141,11 +140,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("J").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(0,2)) +", 5)");
 
@@ -169,11 +167,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("F").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(0,2)) +", -55)");
 
@@ -200,11 +197,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("A").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(186,2)) +", 200)");
 
@@ -228,11 +224,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("C").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(240,2)) +", 250)");
 
@@ -256,11 +251,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("J").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(290,2)) +", 295)");
 
@@ -287,11 +281,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("B").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-186,2)) +", -190)");
 
@@ -315,11 +308,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("D").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-240,2)) +", -240)");
 
@@ -343,11 +335,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("I").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-288,2)) +", -285)");
 
@@ -374,11 +365,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("H").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(343,2)) +", 350)");
 
@@ -402,11 +392,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("E").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(350,2)) +", 355)");
 
@@ -430,11 +419,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("G").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(345,2)) +", 348)");
 
@@ -461,11 +449,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("C").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-346,2)) +", -343)");
 
@@ -489,11 +476,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("F").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-347,2)) +", -343)");
 
@@ -520,11 +506,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("A").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(298,2)) +", 299)");
 
@@ -548,11 +533,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("F").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(274,2)) +", 275)");
 
@@ -576,11 +560,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("H").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(246,2)) +", 247)");
 
@@ -604,11 +587,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("I").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(216,2)) +", 217)");
 
@@ -632,11 +614,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("J").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(184,2)) +", 185)");
 
@@ -663,11 +644,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("D").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-294,2)) +", -285)");
 
@@ -691,11 +671,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("B").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-248,2)) +", -240)");
 
@@ -719,11 +698,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("E").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-198,2)) +", -190)");
 
@@ -750,11 +728,10 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("J").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-48,2)) +", -40)");
 
@@ -778,10 +755,9 @@ svg.append("circle")
 			.style("left", (d3.event.pageX +10) + "px")		
 	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
-				console.log("begin timeout");
 				machineTooltip.transition()		
 	            .duration(500)		
 	            .style("opacity", 0);	
-			}, 4000);
+			}, 3000);
 		});
 svg.append("text").text("I").attr("x", vm.attr("cx")).attr("y", vm.attr("cy")).attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(48,2)) +", 50)");
