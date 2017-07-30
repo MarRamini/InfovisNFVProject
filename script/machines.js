@@ -110,8 +110,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+	 		.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -138,8 +138,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -166,8 +166,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -197,8 +197,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -225,8 +225,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -253,8 +253,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -284,8 +284,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -312,8 +312,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -340,8 +340,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -371,8 +371,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -399,8 +399,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -427,8 +427,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -458,8 +458,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -486,8 +486,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -517,8 +517,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -545,8 +545,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -573,8 +573,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -601,8 +601,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -629,8 +629,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -660,8 +660,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -688,8 +688,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -716,8 +716,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -747,8 +747,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		
@@ -775,8 +775,8 @@ svg.append("circle")
 	 		.duration(200)		
 	 		.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX) + "px")		
-	 		.style("top", (d3.event.pageY - 30) + "px");
+			.style("left", (d3.event.pageX +10) + "px")		
+	 		.style("top", (d3.event.pageY - 40) + "px");
 			setTimeout(function(){
 				console.log("begin timeout");
 				machineTooltip.transition()		

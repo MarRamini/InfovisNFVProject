@@ -601,8 +601,8 @@ for(i=0 ; i<numberOfUsers ; i++){
 		 		.duration(200)		
 		 		.style("opacity", .9);		
 		 	 d3.select("#pathTooltip" + chainNumber)
-		 		.style("left", (d3.event.pageX) + "px")		
-		 		.style("top", (d3.event.pageY - 30) + "px");	
+		 		.style("left", (d3.event.pageX + 10) + "px")		
+		 		.style("top", (d3.event.pageY - 40) + "px");	
             })					
         .on("mouseout", function(d) {
         	var _this = d3.select(this);
