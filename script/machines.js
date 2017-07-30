@@ -83,8 +83,18 @@ function jobOccupationColor(machine, job){
 }
 
 var machineTooltip = d3.select("body").append("div")
-		.attr("class", "machineTooltip")
-		.attr("opacity", 0);
+		.attr("class", "machineTooltip tooltip")
+		.attr("opacity", 0.9);
+
+var container = machineTooltip.append("div")
+		.attr("class", "tooltipVoicesContainer container");
+var tooltipVoice1 = container.append("span")
+		.attr("class", "tooltipVoice");
+var tooltipVoice2 =	container.append("span")
+		.attr("class", "tooltipVoice");
+
+machineTooltip.append("div")
+		.attr("class", "tooltipArrow");
 
 //defining functions for each VirtualMachine from A to J and assigning functions to each virtual machine
 //VM0 functions A,J,F
@@ -105,13 +115,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(60,2)) +", 60)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm0", "A"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm0", "A"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+	 			.duration(200)		
+	 			.style("opacity", .9);		
 			machineTooltip
-	 		.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+	 			.style("left", (d3.event.pageX  - 12) + "px")		
+	 			.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -132,13 +143,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(0,2)) +", 0)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm0", "J"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm0", "J"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -159,13 +171,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-60,2)) +", -60)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm0", "F"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm0", "F"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+	 			.duration(200)		
+	 			.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+				.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -189,13 +202,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(195,2)) +", 195)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm1", "A"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm1", "A"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -216,13 +230,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(245,2)) +", 245)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm1", "C"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm1", "C"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -243,13 +258,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(290,2)) +", 290)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm10", "J"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm1", "J"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -273,13 +289,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-195,2)) +", -195)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm2", "B"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm2", "B"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+	 			.duration(200)		
+	 			.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+				.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -300,13 +317,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-245,2)) +", -245)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm2", "D"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm2", "D"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -327,13 +345,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-290,2)) +",-290)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm2", "I"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm2", "I"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -357,13 +376,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(344,2)) +", 344)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm3", "H"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm3", "H"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -384,13 +404,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(350,2)) +", 350)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm3", "E"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm3", "E"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -411,13 +432,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(344,2)) +", 344)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm3", "G"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm3", "G"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -441,13 +463,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ -Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-347,2)) +", -347)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm4", "C"));
+			tooltipVoice1html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm4", "C"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -468,13 +491,16 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-347,2)) +", -347)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm4", "F"));
+			tooltipVoice1
+			.attr("class", "tooltipVoice")
+			.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm4", "F"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -498,13 +524,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(295,2)) +", 295)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm5", "A"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm5", "A"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -525,13 +552,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(271,2)) +", 271)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm5", "F"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm5", "F"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -552,13 +580,14 @@ svg.append("circle")
 		.attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(243,2)) +", 243)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm5", "H"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm5", "H"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -579,13 +608,14 @@ svg.append("circle")
 		.attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(213,2)) +", 213)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm5", "I"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm5", "I"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -606,13 +636,14 @@ svg.append("circle")
 		.attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(181,2)) +", 181)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm5", "J"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm5", "J"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -636,13 +667,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-290,2)) +", -290)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm6", "D"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm6", "D"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -663,13 +695,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-245,2)) +", -245)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm6", "B"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm6", "D"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -690,13 +723,14 @@ svg.append("circle")
 		.attr("transform", "translate("+ Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-195,2)) +", -195)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm6", "E"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm6", "E"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -720,13 +754,14 @@ svg.append("circle")
 		.attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(-45,2)) +", -45)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm7", "J"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm7", "J"));;
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		
@@ -747,13 +782,14 @@ svg.append("circle")
 		.attr("transform", "translate(" + Math.sqrt(Math.pow(dispositionRadius,2) - Math.pow(45,2)) +", 45)")
 		.on("click", function(){
 			var _this = d3.select(this);
-			machineTooltip.html(_this.attr("class") + "<br/> Chains: " + jobOccupation("vm7", "I"));
+			tooltipVoice1.html(_this.attr("class"));
+			tooltipVoice2.html("Chains: " + jobOccupation("vm7", "I"));
 			machineTooltip.transition()		
-	 		.duration(200)		
-	 		.style("opacity", .9);		
+		 		.duration(200)		
+		 		.style("opacity", .9);		
 			machineTooltip
-			.style("left", (d3.event.pageX +10) + "px")		
-	 		.style("top", (d3.event.pageY - 40) + "px");
+				.style("left", (d3.event.pageX  - 12) + "px")		
+		 		.style("top", (d3.event.pageY  - 65) + "px");
 			setTimeout(function(){
 				machineTooltip.transition()		
 	            .duration(500)		

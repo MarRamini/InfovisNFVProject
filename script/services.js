@@ -564,10 +564,21 @@ for(i=0 ; i<numberOfUsers ; i++){
 	
 	//a tooltip to display useful information about the path of the service chain
 	var pathTooltip = d3.select("body").append("div")
-					.attr("class", "pathTooltip")
+					.attr("class", "pathTooltip tooltip")
 					.attr("id", "pathTooltip" + i)
 					.attr("opacity", 0)
-					.html("User" + i + "<br/>" + "Service Chain: {" + serviceChainCopy.toString() + "}");	
+					
+	var container = pathTooltip.append("div")
+					.attr("class", "tooltipVoicesContainer container");
+	
+	var tooltipVoice = container.append("span")
+					.html("User" + i)
+					.attr("class", "tooltipVoice");
+	tooltipVoice = container.append("span")
+					.html("Service Chain: {" + serviceChainCopy.toString() + "}")
+					.attr("class", "tooltipVoice");
+	pathTooltip.append("div")
+					.attr("class", "tooltipArrow");
 	
 	var lineFunction = d3.line()
 		.x(function(d){return d.x})
@@ -602,8 +613,8 @@ for(i=0 ; i<numberOfUsers ; i++){
 		 		.duration(200)		
 		 		.style("opacity", .9);		
 		 	d3.select("#pathTooltip" + chainNumber)
-		 		.style("left", (d3.event.pageX + 10) + "px")		
-		 		.style("top", (d3.event.pageY - 40) + "px");	
+		 		.style("left", (d3.event.pageX -12) + "px")		
+		 		.style("top", (d3.event.pageY - 65) + "px");	
             })					
         .on("mouseout", function(d) {
         	var _this = d3.select(this);
@@ -616,5 +627,5 @@ for(i=0 ; i<numberOfUsers ; i++){
         	var _this = d3.select(this);
         	var menu = createMenu(_this);        	
         	event.preventDefault();
-        });		
+        });	
 }
