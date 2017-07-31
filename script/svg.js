@@ -2,12 +2,30 @@
  * creates and sets the svg
  */
 
+var currentWidth = window.innerWidth;
+var currentHeight = window.innerHeight;
+
 var svg = d3.select("body")
 				.append("svg")
 				.attr("class", "drawingArea")				
-				.on("wheel", function(){
-					adjustLegend(d3.event.wheelDeltaY);
+				.on("wheel", function(event){
+					var offset = d3.event.wheelDeltaY;
+					console.log(offset)
+					console.log(window.innerWidth)
+					console.log(window.innerHeight)
+					currentWidth = currentWidth + offset;
+					currentHeight = currentHeight + offset;
+					d3.select("svg")
+						.attr("viewBox", "0 0 "+ (currentWidth) + " " + (currentHeight))
+						d3.event.preventDefault()
+						//d3.event.stopPropagation()
+					//adjustLegend(d3.event.wheelDeltaY);
 				});
+d3.select('svg')
+  .attr( 'preserveAspectRatio',"xMinYMin meet")
+  //.attr("viewBox", "0 0 " + window.innerWidth + " " + window.innerHeight)
+  .attr('width', '100%')
+
 
 var vms = 8 //number of virtual machines
 

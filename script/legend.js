@@ -5,7 +5,7 @@
 var popupContainer = svg.append("g")
 						.attr("class", "popUpLegend")
 						.attr("x", 0)
-						.attr("y", 0);
+						.attr("y", -20);
 svg.append("defs")
 	.append("pattern")
 	.attr("id", "popUpIcon")
