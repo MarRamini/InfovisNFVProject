@@ -141,3 +141,7 @@ path:hover{
 .popUpContainer.closed{
 	stroke: #c88937;
 }
+
+.clicked{
+	stroke: chocolate;
+}
