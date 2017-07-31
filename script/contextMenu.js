@@ -74,7 +74,7 @@ function setMenuVoices(menu, path){
 					var elem = d3.select(paths._groups[0][i])
 					elem.style("visibility", "visible");
 				}
-				chainsHided = true;
+				chainsHided = false;
 				d3.select(".contextMenu").remove();
 			});
 	

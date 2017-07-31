@@ -557,9 +557,11 @@ for(i=0 ; i<numberOfUsers ; i++){
 				break;
 		}
 		lineData.push(endPoint);
-		
+		lastJob = currentJob;
 		currentJob = serviceChain.shift();
 	}
+
+	lineData.push(initialPointFunction(currentMachine, lastJob));
 	//to do: insert here and end point outside the graph after the last job
 	
 	//a tooltip to display useful information about the path of the service chain
@@ -601,7 +603,6 @@ for(i=0 ; i<numberOfUsers ; i++){
 				d3.select(previousClicked[i]).attr("stroke", "#446ca2");
 			}
 			_this.attr("class", "clicked"); //select clicked path
-			_this.attr("stroke", "chocolate");
 			/*
 			//code to select multiple paths
 			pathClicked(_this);*/
