@@ -566,7 +566,7 @@ for(i=0 ; i<numberOfUsers ; i++){
 	var pathTooltip = d3.select("body").append("div")
 					.attr("class", "pathTooltip tooltip")
 					.attr("id", "pathTooltip" + i)
-					.attr("opacity", 0)
+					.attr("opacity", 0);
 					
 	var container = pathTooltip.append("div")
 					.attr("class", "tooltipVoicesContainer container");
@@ -609,12 +609,13 @@ for(i=0 ; i<numberOfUsers ; i++){
 		.on("mouseover", function(d) {		
 			var _this = d3.select(this);
 			var chainNumber = _this.attr("chainNumber");
+			d3.select("#pathTooltip" + chainNumber)
+		 		.style("left", (d3.event.pageX -12) + "px")		
+		 		.style("top", (d3.event.pageY - 65) + "px")
+		 		.style("display", "block");
 		 	d3.select("#pathTooltip" + chainNumber).transition()		
 		 		.duration(200)		
-		 		.style("opacity", .9);		
-		 	d3.select("#pathTooltip" + chainNumber)
-		 		.style("left", (d3.event.pageX -12) + "px")		
-		 		.style("top", (d3.event.pageY - 65) + "px");	
+		 		.style("opacity", 0.9);			 		
             })					
         .on("mouseout", function(d) {
         	var _this = d3.select(this);
