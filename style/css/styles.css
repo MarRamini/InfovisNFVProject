@@ -81,7 +81,7 @@ path:hover{
 	padding:5px;
 }
 .menuVoice:hover{
-	background-color: lightgray;
+	background-color: #e6e6e6;
 }
 
 .menuVoice:nth-Child(2) , .menuVoice:nth-Child(4){
