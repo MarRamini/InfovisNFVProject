@@ -10,6 +10,7 @@ body{
 	width: 100%;
 	background-color: aliceblue;
 	font-family: sans-serif;
+	margin: 0px;
 }
 
 text{
@@ -28,7 +29,7 @@ path:hover{
 
 .legendBar{
 	width: 30px;
-	height: 700px;
+	height: 500px;
 }
 
 .pathTooltip{
@@ -120,4 +121,22 @@ path:hover{
 	display: block;
 	pointer-events: none;
 	padding: 2px;
+}
+
+.legendTitle{
+	font-size: 16px;
+}
+
+.legendLabel{
+	font-size: 13px;
+}
+
+.popUpContainer{
+	fill: lightyellow;
+	stroke: burlywood;
+	stroke-width: 1px;
+}
+
+.popUpContainer.closed{
+	stroke: #c88937;
 }

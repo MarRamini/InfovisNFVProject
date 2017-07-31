@@ -4,7 +4,10 @@
 
 var svg = d3.select("body")
 				.append("svg")
-				.attr("class", "drawingArea");
+				.attr("class", "drawingArea")				
+				.on("wheel", function(){
+					adjustLegend(d3.event.wheelDeltaY);
+				});
 
 var vms = 8 //number of virtual machines
 
