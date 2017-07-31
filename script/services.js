@@ -22,6 +22,7 @@ function colorPath(path){
 function removeColor(path){
 	var color;
 	if(path.attr("class") == "colored"){
+		path.attr("class", "");
 		color = path.attr("stroke");
 		colorPool.push(color);
 		path.attr("stroke", "#446ca2");
