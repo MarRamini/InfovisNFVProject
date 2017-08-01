@@ -68,8 +68,121 @@ var centerOfGraph = {"x": 600, "y": 475}
 
 function pointAtX(a, b, x){
 	var slope = (b[1] - a[1]) / (b[0] - a[0]);
-	var y = a[1] + (x - a[0]) * slope;
-	return [x, y];
+	if(slope == "-Infinity"){
+		var y = a[1] + x;
+		return [a[0], y];
+	}
+	if(slope == "Infinity"){
+		var y = a[1] + x;
+		return [a[0], y];
+	}
+	else{
+		var y = a[1] + (x - a[0]) * slope;
+		return [x, y];
+	}
+}
+
+function isSamePoint(point1, point2){
+	return point1.x == point2.x && point1.y == point2.y;
+}
+
+function getIntermediatePoint(point1, point2){
+	if(isSamePoint(point1, point2)){
+		var meanPoint = point1;	
+		if(meanPoint.x < centerOfGraph){
+			meanPoint.x = meanPoint.x - 10;
+			if(meanPoint.y < centerOfGraph.y){
+				meanPoint.y = meanPoint.y - 10;
+			}
+			else if(meanPoint.y > centerOfGraph.y){
+				meanPoint.y = meanPoint.y + 10;
+			}
+		}
+		else if(meanPoint.x > centerOfGraph){
+			meanPoint.x = meanPoint.x + 10;
+			if(meanPoint.y < centerOfGraph.y){
+				meanPoint.y = meanPoint.y - 10;
+			}
+			else if(meanPoint.y > centerOfGraph.y){
+				meanPoint.y = meanPoint.y + 10;
+			}
+		}
+		else{
+			if(meanPoint.y < centerOfGraph.y){
+				meanPoint.y = meanPoint.y - 10;
+			}
+			else if(meanPoint.y > centerOfGraph.y){
+				meanPoint.y = meanPoint.y + 10;
+			}
+		}
+	}
+	else{
+		var meanPoint = {};
+		meanPoint.x = (point1.x + point2.x)/2;
+		meanPoint.y = (point1.y + point2.y)/2;
+		if(meanPoint.x < centerOfGraph.x){
+			meanPoint.x = meanPoint.x - 30;
+			if(meanPoint.y < centerOfGraph.y){
+				meanPoint.y = meanPoint.y - 30;
+			}
+			else if(meanPoint.y > centerOfGraph.y){
+				meanPoint.y = meanPoint.y + 30;
+			}
+		}
+		else if(meanPoint.x > centerOfGraph.x){
+			meanPoint.x = meanPoint.x + 30;
+			if(meanPoint.y < centerOfGraph.y){
+				meanPoint.y = meanPoint.y - 30;
+			}
+			else if(meanPoint.y > centerOfGraph.y){
+				meanPoint.y = meanPoint.y + 30;
+			}
+		}
+		else{
+			if(meanPoint.y < centerOfGraph.y){
+				meanPoint.y = meanPoint.y - 30;
+			}
+			else if(meanPoint.y > centerOfGraph.y){
+				meanPoint.y = meanPoint.y + 30;
+			}
+		}
+	}
+	return meanPoint;
+}
+
+function getFinalPoint(currentMachine, job){
+	var finalPoint = initialPointFunction(currentMachine, job);
+	console.log
+	if(finalPoint.x < centerOfGraph.x){
+		if(finalPoint.y < centerOfGraph.y){
+			finalPoint.x = finalPoint.x - 30;
+			finalPoint.y = finalPoint.y - 30;
+		}
+		else if(finalPoint.y > centerOfGraph.y){
+			finalPoint.x = finalPoint.x - 30;
+			finalPoint.y = finalPoint.y + 30;
+		}
+		else{
+			finalPoint.y = finalPoint.y + 30;
+		}		
+	}
+	else if(finalPoint.x > centerOfGraph.x){
+		if(finalPoint.y < centerOfGraph.y){
+			finalPoint.x = finalPoint.x + 30;
+			finalPoint.y = finalPoint.y - 30;
+		}
+		else if(finalPoint.y > centerOfGraph.y){
+			finalPoint.x = finalPoint.x + 30;
+			finalPoint.y = finalPoint.y + 30;
+		}
+		else{
+			finalPoint.y = finalPoint.y + 30;
+		}
+	}
+	else{
+		finalPoint.x = finalPoint.x + 30;
+	}
+	return finalPoint;
 }
 
 function initialPointFunction(currentMachine, job){
@@ -301,6 +414,77 @@ function initialPointFunction(currentMachine, job){
 	return initialPoint;
 }
 
+function endPointFunction(currentJob, currentMachine){
+	switch(currentMachine){
+	case "vm0":
+			for(m=0 ; m<vm0_job2points.length; m++){
+				var elem = vm0_job2points[m];
+				if(currentJob == elem.job){
+					endPoint = {"x": elem.x, "y": elem.y}
+				}
+			}
+			break;
+	case "vm1":
+		for(m=0 ; m<vm1_job2points.length; m++){
+			var elem = vm1_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	case "vm2":
+		for(m=0 ; m<vm2_job2points.length; m++){
+			var elem = vm2_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	case "vm3":
+		for(m=0 ; m<vm3_job2points.length; m++){
+			var elem = vm3_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	case "vm4":
+		for(m=0 ; m<vm4_job2points.length; m++){
+			var elem = vm4_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	case "vm5":
+		for(m=0 ; m<vm5_job2points.length; m++){
+			var elem = vm5_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	case "vm6":
+		for(m=0 ; m<vm6_job2points.length; m++){
+			var elem = vm6_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	case "vm7":
+		for(m=0 ; m<vm7_job2points.length; m++){
+			var elem = vm7_job2points[m];
+			if(currentJob == elem.job){
+				endPoint = {"x": elem.x, "y": elem.y}
+			}
+		}
+		break;
+	}
+	return endPoint;
+}
+	
+
 //increments chain counter for each job
 function incrementCounter(machine, job){
 	switch(machine){
@@ -422,9 +606,9 @@ for(i=0 ; i<numberOfUsers ; i++){
 	}
 	
 	var serviceChainCopy = []; //storing information about the service chain for later use
-	for(z=0 ; z<serviceChain.length ; z++){
-		serviceChainCopy.push(serviceChain[z]);
-	}
+	serviceChain.forEach(function(element){
+		serviceChainCopy.push(element);
+	});
 	
 	var svg = d3.select("svg");
 	var lineData = [];
@@ -432,6 +616,8 @@ for(i=0 ; i<numberOfUsers ; i++){
 	
 	var currentJob = serviceChain.shift();
 	var firstJob = true; //flag to set the initialPoint only in the first iteration
+	var previousMachine;
+	var previousEndPoint;
 	
 	while(currentJob != undefined){
 		var machines = [];
@@ -484,86 +670,31 @@ for(i=0 ; i<numberOfUsers ; i++){
 		//if it's the first iteration the line begins outside the graph otherwise the beginning point of the line is already defined
 		if(firstJob){
 			var initialPoint = initialPointFunction(currentMachine, currentJob);
-			firstJob = false;
 			lineData.push(initialPoint);
+		}		
+		
+		if(endPoint){
+			var previousPoint = endPoint;
 		}
 		
+		var endPoint = endPointFunction(currentJob, currentMachine);
 		
-		//pushing the selected job point into an array of points to draw the line
-		var endPoint;
-		switch(currentMachine){
-			case "vm0":
-					for(m=0 ; m<vm0_job2points.length; m++){
-						var elem = vm0_job2points[m];
-						if(currentJob == elem.job){
-							endPoint = {"x": elem.x, "y": elem.y}
-						}
-					}
-					break;
-			case "vm1":
-				for(m=0 ; m<vm1_job2points.length; m++){
-					var elem = vm1_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
-			case "vm2":
-				for(m=0 ; m<vm2_job2points.length; m++){
-					var elem = vm2_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
-			case "vm3":
-				for(m=0 ; m<vm3_job2points.length; m++){
-					var elem = vm3_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
-			case "vm4":
-				for(m=0 ; m<vm4_job2points.length; m++){
-					var elem = vm4_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
-			case "vm5":
-				for(m=0 ; m<vm5_job2points.length; m++){
-					var elem = vm5_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
-			case "vm6":
-				for(m=0 ; m<vm6_job2points.length; m++){
-					var elem = vm6_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
-			case "vm7":
-				for(m=0 ; m<vm7_job2points.length; m++){
-					var elem = vm7_job2points[m];
-					if(currentJob == elem.job){
-						endPoint = {"x": elem.x, "y": elem.y}
-					}
-				}
-				break;
+		var islastService = serviceChain.length == 0 ? true : false;
+		if(previousMachine == currentMachine && !firstJob && !islastService){
+			var intermediatePoint = getIntermediatePoint(previousPoint, endPoint);
+			lineData.push(intermediatePoint);
 		}
+		
 		lineData.push(endPoint);
+		previousEndPoint = endPoint;
 		lastJob = currentJob;
+		previousMachine = currentMachine;
+		firstJob = false;
 		currentJob = serviceChain.shift();
 	}
-
-	lineData.push(initialPointFunction(currentMachine, lastJob));
-	//to do: insert here and end point outside the graph after the last job
+	
+	var finalPoint = getFinalPoint(currentMachine, lastJob);
+	lineData.push(finalPoint);
 	
 	//a tooltip to display useful information about the path of the service chain
 	var pathTooltip = d3.select("body").append("div")
@@ -583,10 +714,12 @@ for(i=0 ; i<numberOfUsers ; i++){
 	pathTooltip.append("div")
 					.attr("class", "tooltipArrow");
 	
+	
 	var lineFunction = d3.line()
 		.x(function(d){return d.x})
 		.y(function(d){return d.y});
-
+		//.curve(d3.curveBasis);
+	
 	var line = svg.append("path")
 		.attr("d", lineFunction(lineData))
 		.attr("id", "chain" + i)
