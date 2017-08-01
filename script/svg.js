@@ -10,11 +10,8 @@ var svg = d3.select("body")
 				.attr("class", "drawingArea")				
 				.on("wheel", function(event){
 					var offset = d3.event.wheelDeltaY;
-					console.log(offset)
-					console.log(window.innerWidth)
-					console.log(window.innerHeight)
-					currentWidth = currentWidth + offset;
-					currentHeight = currentHeight + offset;
+					currentWidth = currentWidth - offset;
+					currentHeight = currentHeight - offset;
 					d3.select("svg")
 						.attr("viewBox", "0 0 "+ (currentWidth) + " " + (currentHeight))
 						d3.event.preventDefault()
