@@ -24,5 +24,5 @@ Per quanto riguarda la disposizione dei file all'interno del progetto il package
 
 Si consiglia la visualizzazione con il browser Chrome, poichè su Firefox non riconosce alcune delle regole css necessarie alla corretta visualizzazione (una fra tutte la regola che imposta il gradiente della legenda), mentre non sono stati testati altri browser, per cui il comportamento potrebbe risultare inaspettato.
 
-Marco Ramini
+Marco Ramini,
 Rinaldo Buratti
